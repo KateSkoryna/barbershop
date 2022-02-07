@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #fff;
+  --bg-color: F7F7F7;
+  --extra-bg-color: #191C26;
+  --acent-color: #FF6C00;
+  --primary-text-color: #555555;
+  --secondary-text-color: #9DA4BD;
+  --extra-text-color: #303030;
+  --primary-font-size: 18px;
+  --primary-font-family: Open Sans;
+  --secondary-font-family: Raleway;
+
+body {
+  font-family: Raleway, sans-serif;
+}
+
+/* Стилизация шапки страницы */
+.header {
+}
+.nav-list {
+}
+.nav-list-link {
+}
+.header-contact {
+}
+.header-btn {
+}
