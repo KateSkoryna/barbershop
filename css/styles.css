@@ -1,21 +1,25 @@
 :root {
   --primary-color: #fff;
   --bg-color: F7F7F7;
-  --extra-bg-color: #191C26;
-  --acent-color: #FF6C00;
+  --extra-bg-color: #191c26;
+  --acent-color: #ff6c00;
   --primary-text-color: #555555;
-  --secondary-text-color: #9DA4BD;
+  --secondary-text-color: #9da4bd;
   --extra-text-color: #303030;
   --primary-font-size: 18px;
   --primary-font-family: Open Sans;
   --secondary-font-family: Raleway;
+}
 
 body {
-  font-family: 'Open Sans', Raleway, sans-serif;
+  font-family: "Open Sans", Raleway, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+.list {
+  list-style: none;
 }
 
 /* Стилизация шапки страницы */
