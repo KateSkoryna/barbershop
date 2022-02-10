@@ -1,17 +1,19 @@
 :root {
   --primary-color: #fff;
+  --secondary-color: #9da4bd;
+  --extra-text-color: #303030;
+  --acent-color: #ff6c00;
+  --upper-text-color: rgba(157, 164, 189, 0.6);
+  --paragraph-text-color: #555555;
   --bg-color: F7F7F7;
   --extra-bg-color: #191c26;
-  --acent-color: #ff6c00;
-  --primary-text-color: #555555;
-  --secondary-text-color: #9da4bd;
-  --extra-text-color: #303030;
   --primary-font-family: Open Sans;
   --secondary-font-family: Raleway;
   --primary-font-size: 18px;
   --secondary-font-size: 14px;
   --extra-font-size: 12px;
   --optional-font-size: 11px;
+  --primary-letter-spacing: 0.02em;
   --secondary-letter-spacing: 0.05em;
   --extra-letter-spacing: 0.01em;
   --secondary-font-weight: 600;
@@ -22,12 +24,13 @@
 body {
   font-family: "Open Sans", Raleway, sans-serif;
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 
 a {
   text-decoration: none;
+  font-style: normal;
 }
 .list {
   list-style: none;
@@ -43,6 +46,7 @@ a {
 
 .nav-list-link {
   font-size: var(--extra-font-size);
+  font-weight: var(--secondary-font-weight);
   letter-spacing: var(--extra-letter-spacing);
   line-height: var(--primary-line-height);
   color: var(--primary-color);
@@ -65,7 +69,7 @@ a {
   color: var(--acent-color);
 }
 
-.header-btn {
+.page-btn {
   font-family: var(--primary-font-family);
   font-weight: var(--secondary-font-weight);
   font-size: var(--extra-font-size);
@@ -75,8 +79,186 @@ a {
   color: var(--primary-color);
   background-color: transparent;
 }
-.header-btn:hover,
-.header-btn:focus {
+.page-btn:hover,
+.page-btn:focus {
   font-weight: var(--extra-font-weight);
   color: var(--acent-color);
+}
+/* Общая стилизация компонентов */
+
+.upper-section-text {
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.36;
+  letter-spacing: var(--extra-letter-spacing);
+  text-transform: uppercase;
+  color: var(--extra-text-color);
+}
+
+.main-section-text {
+  line-height: 1.66;
+  color: var(--paragraph-text-color);
+}
+
+.section-title {
+  font-family: var(--secondary-font-family);
+  font-weight: var(--extra-font-weight);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: var(--secondary-letter-spacing);
+  color: var(--extra-text-color);
+}
+/* Стилизация скрытых заголовков */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Стилизация главной секции */
+.main {
+}
+.upper-section-text.hero {
+  color: var(--upper-text-color);
+}
+.upper-section-text.inverse {
+  color: var(--primary-color);
+}
+
+.main-header {
+  font-family: var(--secondary-font-family);
+  font-weight: var(--extra-font-weight);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: var(--secondary-letter-spacing);
+}
+
+.main-list {
+}
+.main-list-item {
+}
+
+.main-list-link {
+  font-family: var(--primary-font-family);
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.36;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--extra-text-color);
+}
+.main-list-link:hover,
+.main-list-link:focus {
+  color: var(--acent-color);
+}
+
+.main-section-text.hero {
+  color: var(--secondary-color);
+}
+
+.main-extra-text {
+  font-size: var(--secondary-font-size);
+  line-height: 1.86;
+  color: var(--paragraph-text-color);
+}
+
+/* Стилизация секции  услуги и цены */
+.price {
+  background-color: gray;
+}
+.section-title.hero {
+  color: var(--primary-color);
+}
+
+.price-list-text {
+  line-height: 1.67;
+  color: var(--secondary-color);
+}
+
+/* Стилизация секции особенности салона */
+.features {
+}
+.features-list {
+}
+.features-item {
+  color: var(--extra-text-color);
+  text-align: center;
+}
+.features-number {
+  font-weight: var(--extra-font-weight);
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: var(--secondary-letter-spacing);
+}
+.features-text {
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.37;
+}
+
+/* Стилизация секции Наша Команда */
+.team {
+}
+.team-list {
+}
+.team-list-item {
+}
+.team-list-header {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.39;
+  color: var(--extra-text-color);
+}
+.team-list-text {
+  font-size: var(--secondary-font-size);
+  line-height: 1.36;
+  color: var(--acent-color);
+}
+
+/* Стилизация Галереи */
+.gallery {
+}
+.gallery-list {
+}
+.gallery-list-item {
+}
+
+/* Стилизация секции Онлнай-Запись */
+.booking {
+  background-color: var(--extra-bg-color);
+}
+
+/* Стилизация основных контактов */
+.main-contacts {
+  background-color: var(--extra-bg-color);
+}
+.address-block {
+}
+.address-list {
+}
+.address-list-link {
+  line-height: 1.67;
+  color: var(--secondary-color);
+}
+.address-list-link.underline {
+  text-decoration-line: underline;
+}
+
+/* Стилизация футера */
+.footer {
+}
+.footer-text {
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.36;
+  color: var(--secondary-color);
+}
+.footer-list {
 }
