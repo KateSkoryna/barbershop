@@ -5,7 +5,7 @@
   --acent-color: #ff6c00;
   --upper-text-color: rgba(157, 164, 189, 0.6);
   --paragraph-text-color: #555555;
-  --bg-color: F7F7F7;
+  --bg-color: #f7f7f7;
   --extra-bg-color: #191c26;
   --primary-font-family: Open Sans;
   --secondary-font-family: Raleway;
@@ -26,22 +26,123 @@ body {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.02em;
+  background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
   text-decoration: none;
   font-style: normal;
 }
-.list {
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
+}
+
+img {
+  display: block;
+}
+
+/* Определение контентной части */
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+/* Общая стилизация компонентов */
+
+.upper-section-text {
+  margin-bottom: 20px;
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.36;
+  letter-spacing: var(--extra-letter-spacing);
+  text-transform: uppercase;
+  color: var(--extra-text-color);
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-family: var(--secondary-font-family);
+  font-weight: var(--extra-font-weight);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: var(--secondary-letter-spacing);
+  color: var(--extra-text-color);
+}
+
+.section-title.light {
+  color: var(--primary-color);
+  margin-bottom: 44px;
+}
+.main-section-text {
+  line-height: 1.66;
+  color: var(--paragraph-text-color);
+}
+
+/* Стилизация скрытых заголовков */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Стилизация шапки страницы */
 .header {
   background-color: grey;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding-top: ;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 70px;
 }
 
 .nav-list {
+  display: flex;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .nav-list-link {
@@ -57,6 +158,8 @@ a {
 }
 
 .header-contact {
+  margin-left: auto;
+  margin-right: 40px;
   font-size: var(--extra-font-size);
   font-weight: var(--secondary-font-weight);
   letter-spacing: var(--extra-letter-spacing);
@@ -70,6 +173,13 @@ a {
 }
 
 .page-btn {
+  min-width: 160px;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  border: 1px solid var(--acent-color);
+  border-radius: 25px;
   font-family: var(--primary-font-family);
   font-weight: var(--secondary-font-weight);
   font-size: var(--extra-font-size);
@@ -81,46 +191,8 @@ a {
 }
 .page-btn:hover,
 .page-btn:focus {
-  font-weight: var(--extra-font-weight);
-  color: var(--acent-color);
-}
-/* Общая стилизация компонентов */
-
-.upper-section-text {
-  font-weight: var(--secondary-font-weight);
-  font-size: var(--optional-font-size);
-  line-height: 1.36;
-  letter-spacing: var(--extra-letter-spacing);
-  text-transform: uppercase;
-  color: var(--extra-text-color);
-}
-
-.main-section-text {
-  line-height: 1.66;
-  color: var(--paragraph-text-color);
-}
-
-.section-title {
-  font-family: var(--secondary-font-family);
-  font-weight: var(--extra-font-weight);
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: var(--secondary-letter-spacing);
-  color: var(--extra-text-color);
-}
-/* Стилизация скрытых заголовков */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  background-color: var(--acent-color);
+  color: var(--primary-color);
 }
 
 /* Стилизация главной секции */
@@ -159,10 +231,6 @@ a {
   color: var(--acent-color);
 }
 
-.main-section-text.hero {
-  color: var(--secondary-color);
-}
-
 .main-extra-text {
   font-size: var(--secondary-font-size);
   line-height: 1.86;
@@ -171,10 +239,21 @@ a {
 
 /* Стилизация секции  услуги и цены */
 .price {
-  background-color: gray;
+  background-color: grey;
 }
-.section-title.hero {
-  color: var(--primary-color);
+
+.price-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-list-items {
+  padding: 30px 40px;
+  margin-bottom: 50px;
+}
+
+.price-list-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .price-list-text {
@@ -182,6 +261,11 @@ a {
   color: var(--secondary-color);
 }
 
+.page-btn.middle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Стилизация секции особенности салона */
 .features {
 }
@@ -205,12 +289,32 @@ a {
 
 /* Стилизация секции Наша Команда */
 .team {
+  background-color: var(--bg-color);
 }
+.team .section-title {
+  margin-bottom: 44px;
+}
+
 .team-list {
+  display: flex;
 }
+
 .team-list-item {
+  width: 370px;
 }
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
 .team-list-header {
+  margin-bottom: 8px;
   font-size: inherit;
   font-weight: inherit;
   line-height: 1.39;
@@ -225,9 +329,15 @@ a {
 /* Стилизация Галереи */
 .gallery {
 }
-.gallery-list {
+
+.gallery .upper-section-text {
+  margin-bottom: 44px;
 }
-.gallery-list-item {
+.gallery-list {
+  display: flex;
+}
+.gallery-list-item:not(:nth-child(4n)) {
+  margin-right: 30px;
 }
 
 /* Стилизация секции Онлнай-Запись */
