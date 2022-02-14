@@ -43,6 +43,10 @@ a {
   font-style: normal;
 }
 
+address {
+  font-style: normal;
+}
+
 ol,
 ul {
   margin-top: 0;
@@ -341,24 +345,49 @@ img {
 }
 
 /* Стилизация секции Онлнай-Запись */
-.booking {
+.contacts {
   background-color: var(--extra-bg-color);
+}
+.two-sections {
+  display: flex;
+  justify-content: center;
 }
 
-/* Стилизация основных контактов */
-.main-contacts {
-  background-color: var(--extra-bg-color);
+.two-section-booking {
 }
-.address-block {
+
+.two-section-contacts {
+  padding-left: 100px;
 }
+
 .address-list {
+  text-align: left;
 }
+
+.address-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .address-list-link {
   line-height: 1.67;
   color: var(--secondary-color);
 }
 .address-list-link.underline {
   text-decoration-line: underline;
+}
+
+.work-hours {
+  padding-top: 70px;
+}
+.main-section-text.work-hours-text {
+  color: var(--secondary-color);
+}
+/* Стилизация основных контактов */
+
+.contact-section {
+}
+
+.address-block {
 }
 
 /* Стилизация футера */
