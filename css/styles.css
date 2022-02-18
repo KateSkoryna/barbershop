@@ -72,6 +72,23 @@ img {
 .section {
   padding-top: 130px;
   padding-bottom: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стилизация скрытых заголовков */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Общая стилизация компонентов */
@@ -100,25 +117,6 @@ img {
   color: var(--primary-color);
   margin-bottom: 44px;
 }
-.main-section-text {
-  line-height: 1.66;
-  color: var(--paragraph-text-color);
-}
-
-/* Стилизация скрытых заголовков */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 /* Стилизация шапки страницы */
 .header {
@@ -129,7 +127,6 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
-  padding-top: ;
 }
 
 .page-nav {
@@ -200,29 +197,22 @@ img {
 }
 
 /* Стилизация главной секции */
-.main {
-}
-.upper-section-text.hero {
-  color: var(--upper-text-color);
-}
-.upper-section-text.inverse {
-  color: var(--primary-color);
-}
 
-.main-header {
-  font-family: var(--secondary-font-family);
-  font-weight: var(--extra-font-weight);
-  font-size: 72px;
-  line-height: 1.18;
-  letter-spacing: var(--secondary-letter-spacing);
+.flex-section {
+  display: flex;
 }
 
 .main-list {
+  display: flex;
+  margin-right: 55px;
 }
-.main-list-item {
+
+.main-list-item:not(:nth-child(2n)) {
+  margin-right: 40px;
 }
 
 .main-list-link {
+  display: block;
   font-family: var(--primary-font-family);
   font-weight: var(--secondary-font-weight);
   font-size: var(--optional-font-size);
@@ -230,30 +220,93 @@ img {
   letter-spacing: var(--primary-letter-spacing);
   color: var(--extra-text-color);
 }
+
 .main-list-link:hover,
 .main-list-link:focus {
   color: var(--acent-color);
 }
 
+.main-content {
+  display: block;
+  text-align: left;
+  padding-top: 174px;
+  padding-bottom: 96px;
+  padding-left: 96px;
+  background-image: url();
+}
+
+.main-header {
+  display: block;
+  margin-bottom: 20px;
+  font-family: var(--secondary-font-family);
+  font-weight: var(--extra-font-weight);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: var(--secondary-letter-spacing);
+}
+
+.main-section-text {
+  margin-bottom: 20px;
+  line-height: 1.66;
+  color: var(--paragraph-text-color);
+}
+
+.main-section-text.hero {
+  color: var(--secondary-color);
+}
+
 .main-extra-text {
+  margin-bottom: 40px;
   font-size: var(--secondary-font-size);
   line-height: 1.86;
   color: var(--paragraph-text-color);
 }
 
+/* Стилизация секции О НАС */
+
+.about {
+  padding-top: 140px;
+  padding-bottom: 120px;
+  background-color: teal;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-list-item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+.about-content {
+  margin-left: 64px;
+}
+
 /* Стилизация секции  услуги и цены */
 .price {
-  background-color: grey;
+  max-width: 1200px;
+  background-image: url(../images/price-bg-img.jpg);
+  background-color: #111319;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
 }
 
 .price-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .price-list-items {
+  width: 595px;
   padding: 30px 40px;
-  margin-bottom: 50px;
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .price-list-item:not(:last-child) {
@@ -263,6 +316,7 @@ img {
 .price-list-text {
   line-height: 1.67;
   color: var(--secondary-color);
+  text-align: center;
 }
 
 .page-btn.middle {
@@ -271,15 +325,35 @@ img {
   margin-right: auto;
 }
 /* Стилизация секции особенности салона */
+
 .features {
 }
+
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .features-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background-color: var(--bg-color);
   color: var(--extra-text-color);
   text-align: center;
 }
+
+.features-item:not(:nth-child(2n + 2)) {
+  margin-right: 30px;
+}
+
+.features-item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+}
+
 .features-number {
+  margin-bottom: 6px;
   font-weight: var(--extra-font-weight);
   font-size: 42px;
   line-height: 1.36;
@@ -289,6 +363,10 @@ img {
   font-weight: var(--secondary-font-weight);
   font-size: var(--optional-font-size);
   line-height: 1.37;
+}
+
+.features-content {
+  margin-left: 30px;
 }
 
 /* Стилизация секции Наша Команда */
@@ -345,6 +423,7 @@ img {
 }
 
 /* Стилизация секции Онлнай-Запись */
+
 .contacts {
   background-color: var(--extra-bg-color);
 }
@@ -358,6 +437,12 @@ img {
 
 .two-section-contacts {
   padding-left: 100px;
+}
+
+/* Стилизация основных контактов */
+
+.address-block {
+  margin-bottom: 70px;
 }
 
 .address-list {
@@ -376,28 +461,58 @@ img {
   text-decoration-line: underline;
 }
 
-.work-hours {
-  padding-top: 70px;
+.upper-section-text.inverse {
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
-.main-section-text.work-hours-text {
+
+.work-hours-text {
   color: var(--secondary-color);
-}
-/* Стилизация основных контактов */
-
-.contact-section {
-}
-
-.address-block {
 }
 
 /* Стилизация футера */
+
 .footer {
 }
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-text {
+  display: block;
+  padding-top: 56px;
+  padding-bottom: 56px;
   font-weight: var(--secondary-font-weight);
   font-size: var(--optional-font-size);
   line-height: 1.36;
   color: var(--secondary-color);
 }
 .footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.footer-list-link {
+  display: block;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  font-family: var(--primary-font-family);
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--optional-font-size);
+  line-height: 1.36;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--extra-text-color);
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+  color: var(--acent-color);
 }
