@@ -16,7 +16,11 @@
     <header class="header">
         <div class="container header-nav">
             <nav class="page-nav">
-                <a class="logo" href="top"> <img src="./images/logo.svg" alt="Логотип компании"></a>
+                <a class="logo" href="top">
+                    <svg class="logo-icon" width="66" height="56">
+                        <use href="./images/icon.svg#logo"></use>
+                    </svg>
+                </a>
                 <ul class="nav-list">
                     <li class="nav-list-item">
                         <a class="nav-list-link" href="#about">О нас</a>
@@ -33,7 +37,7 @@
                 </ul>
             </nav>
                 <a class="header-contact" href="tel:+38 044 111 11 11">+38 044 111 11 11</a>
-                <button class="page-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
+                <button class="header-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
         </div>
     </header>
     <main>
@@ -47,10 +51,10 @@
                         <a class="main-list-link" href="/" target="_blank" rel="nofollow noopener norefferer">Facebook</a>
                     </li>
                 </ul>
-                <div class="main-content">
-                    <p class="upper-section-text hero" lang="en">A hair salon for men in Kyiv</p>
+                <div class="main-right-side">
+                    <p class="upper-section-text light" lang="en">A hair salon for men in Kyiv</p>
                     <h1 class="main-header" lang="en">BarberShop</h1>
-                    <p class="main-section-text hero">Мы эксперты в модных мужских стрижках. <br>
+                    <p class="main-section-text light">Мы эксперты в модных мужских стрижках. <br>
                         Работаем быстро, осторожно и со вкусом.</p>
                 </div>
                 
@@ -74,7 +78,7 @@
                         и жаждет перемен. И когда ты попадешь в руки нашего мастера,
                         то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
                         готовы усовершенствовать каждого, кто к нам приходит!</p>
-                    <button class="page-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
+                    <button class="section-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
                 </div>
             </div>
         </section>
@@ -83,36 +87,43 @@
                 <p class="upper-section-text light">Проведи время в компании лучших мастеров</p>
                 <h2 class="section-title light">Услуги и Цены</h2>
                 <div class="price-list">
-                    <ul class="price-list-items">
+                    <ul class="price-list-items left">
                         <li class="price-list-item">
-                            <p class="price-list-text">Мужская стрижка<span>.................................</span>от 300 грн.</p>
+                            <p class="price-list-text">Мужская стрижка</p>
+                            <p class="price-list-value">от 300 грн.</p>
                         </li>
                         <li class="price-list-item">
-                            <p class="price-list-text">Стрижка бороды<span>..................................</span>от 200 грн.</p>
+                            <p class="price-list-text">Стрижка бороды</p>
+                            <p class="price-list-value">от 200 грн.</p>
                         </li>
                         <li class="price-list-item">
-                            <p class="price-list-text">Стрижка усов<span>........................................</span>от 200 грн.</p>
-                        </li>
+                            <p class="price-list-text">Стрижка усов</p>
+                            <p class="price-list-value">от 200 грн.</p>
                         <li class="price-list-item">
-                            <p class="price-list-text">Бритье опасной бритвой<span>...................</span>от 200 грн.</p>
+                            <p class="price-list-text">Бритье опасной бритвой</p>
+                            <p class="price-list-value">от 200 грн.</p>
                         </li>
                     </ul>
-                    <ul class="price-list-items">
+                    <ul class="price-list-items right">
                         <li class="price-list-item">
-                            <p class="price-list-text">Cтрижка у стажера<span>................................</span>от 50 грн.</p>
+                            <p class="price-list-text">Cтрижка у стажера</p>
+                            <p class="price-list-value">от 50 грн.</p>
                         </li>
                         <li class="price-list-item">
-                            <p class="price-list-text">Стрижка под насадку<span>...........................</span>от 200 грн.</p>
+                            <p class="price-list-text">Стрижка под насадку</p>
+                            <p class="price-list-value">от 200 грн.</p>
                         </li>
                         <li class="price-list-item">
-                            <p class="price-list-text">Детская стрижка (до 12 лет)<span>...............</span>от 300 грн.</p>
+                            <p class="price-list-text">Детская стрижка (до 12 лет)</p>
+                            <p class="price-list-value">от 300 грн.</p>
                         </li>
                         <li class="price-list-item">
-                            <p class="price-list-text">Камуфлирование седины<span>...................</span>от 200 грн.</p>
+                            <p class="price-list-text">Камуфлирование седины</p>
+                            <p class="price-list-value">от 200 грн.</p>
                         </li>
                     </ul>
                 </div>
-                <button class="page-btn middle" type="button">ОНЛАЙН-ЗАПИСЬ</button>
+                <button class="header-btn middle" type="button">ОНЛАЙН-ЗАПИСЬ</button>
             </div>
         </section>
         <section class="features section">
@@ -154,6 +165,36 @@
                         <div class="team-list-title">
                             <h3 class="team-list-header" lang="en">John Smith</h3>
                             <p class="team-list-text" lang="en">Extreme Barber</p>
+                        <ul class="team-sm-list">
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                   <a href="/" class="team-sm-link">
+                                       <svg class="sm-icon" width="20" height="20">
+                                           <use href="./images/icon.svg#facebook"></use>
+                                       </svg>
+                                   </a>
+                            </li>
+                            <li class="team-sm-item">
+                                   <a href="/" class="team-sm-link">
+                                       <svg class="sm-icon" width="20" height="20">
+                                           <use href="./images/icon.svg#linkedin"></use>
+                                       </svg>
+                                   </a>
+                            </li>
+                        </ul>
                         </div>
                     </li>
                     <li class="team-list-item">
@@ -161,6 +202,36 @@
                         <div class="team-list-title">
                             <h3 class="team-list-header" lang="en">Michele Doe</h3>
                             <p class="team-list-text" lang="en">Extreme Barber</p>
+                        <ul class="team-sm-list">
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                         </div>
                     </li>
                     <li class="team-list-item">
@@ -168,6 +239,36 @@
                         <div class="team-list-title">
                             <h3 class="team-list-header" lang="en">lan Black</h3>
                             <p class="team-list-text" lang="en">Extreme Barber</p>
+                        <ul class="team-sm-list">
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="team-sm-item">
+                                <a href="/" class="team-sm-link">
+                                    <svg class="sm-icon" width="20" height="20">
+                                        <use href="./images/icon.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                         </div>
                     </li>
                 </ul>
@@ -199,21 +300,32 @@
         </section>
         <section class="contacts section" id="contacts">
             <div class="container two-sections">
-                <div class="two-section-booking">
+                <div class="booking-section">
                     <h2 class="section-title light">Онлайн-запись</h2>
-                    <button class="page-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
+                    <button class="header-btn" type="button">ОНЛАЙН-ЗАПИСЬ</button>
                 </div>
-                <div class="two-section-contacts">
+                <div class="contact-section">
                     <h2 class="section-title light">Контакты</h2>
                     <address class="address-block">
                         <ul class="address-list">
                             <li class="address-list-item">
-                                <a class="address-list-link" href="https://goo.gl/maps/96TGTuwZPvs1Bid28" target="_blank"
-                                    rel="noopener noreferrer nofollow ">ул. Васильковая, 7А <br>
-                                    Киев, 08132</a>
-                            </li>
-                            <li class="address-list-item"><a class="address-list-link" href="tel:++38 044 111 11 11">+38 044 111 11 11</a></li>
-                            <li class="address-list-item"><a class="address-list-link underline" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+                                <a class="address-list-link map" href="https://goo.gl/maps/96TGTuwZPvs1Bid28" target="_blank"
+                                    rel="noopener noreferrer nofollow">
+                                    <svg class="address-list-icon"  width="24" height="24">
+                                        <use href="./images/icon.svg#map-pin"></use>
+                                    </svg>
+                                    ул. Васильковая, 7А <br>
+                                    Киев, 08132</a></li>
+                            <li class="address-list-item"><a class="address-list-link" href="tel:++38 044 111 11 11">
+                                <svg class="address-list-icon" width="24" height="24">
+                                    <use href="./images/icon.svg#phone"></use>
+                                </svg>
+                                +38 044 111 11 11</a></li>
+                            <li class="address-list-item"><a class="address-list-link underline" href="mailto:barbershop@email.com">
+                                <svg class="address-list-icon" width="24" height="24">
+                                    <use href="./images/icon.svg#mail"></use>
+                                </svg>
+                                barbershop@email.com</a></li>
                         </ul>
                     </address>
                     <div class="work-hours">
