@@ -148,7 +148,8 @@ img {
 /* Стилизация шапки страницы */
 
 .header {
-  background-color: grey;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -175,6 +176,7 @@ img {
 }
 
 .nav-list-link {
+  transition: color 250ms linear;
   font-size: var(--extra-font-size);
   font-weight: var(--secondary-font-weight);
   letter-spacing: var(--extra-letter-spacing);
@@ -187,6 +189,7 @@ img {
 }
 
 .header-contact {
+  transition: color 250ms linear;
   margin-left: auto;
   margin-right: 40px;
   font-size: var(--extra-font-size);
@@ -202,6 +205,7 @@ img {
 }
 
 .header-btn {
+  transition: color 250ms linear, background-color 250ms linear;
   min-width: 160px;
   padding-top: 12px;
   padding-right: 15px;
@@ -231,23 +235,33 @@ img {
 }
 
 /* Стилизация главной секции */
-
-.flex-section {
+.main-container {
   display: flex;
+}
+
+.main-left-side {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 26px;
+  padding-bottom: 40px;
+  width: 100px;
 }
 
 .main-list {
   display: flex;
-  width: 100px;
+  align-items: center;
+  transform: rotate(-90deg);
+  transform-origin: left top;
 }
 
 .main-list::before {
+  display: block;
   width: 60px;
   height: 1px;
-  margin-right: 40px;
   background-color: var(--extra-text-color);
   content: "";
   flex-shrink: 0;
+  margin-right: 40px;
 }
 
 .main-list-item:first-child {
@@ -255,7 +269,6 @@ img {
 }
 
 .main-list-link {
-  display: block;
   font-family: var(--primary-font-family);
   font-weight: var(--secondary-font-weight);
   font-size: var(--optional-font-size);
@@ -270,8 +283,6 @@ img {
 }
 
 .main-right-side {
-  display: block;
-  text-align: left;
   padding-top: 272px;
   padding-bottom: 206px;
   padding-left: 100px;
@@ -505,6 +516,7 @@ img {
 }
 
 .team-sm-link {
+  transition: color 250ms linear;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,8 +537,6 @@ img {
 }
 
 /* Стилизация Галереи */
-.gallery {
-}
 
 .gallery .upper-section-text {
   margin-bottom: 44px;
