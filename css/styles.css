@@ -71,7 +71,7 @@ img {
 
 .section {
   padding-top: 130px;
-  padding-bottom: 130px;
+  padding-bottom: 129px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -557,26 +557,83 @@ img {
   margin-right: 30px;
 }
 
-/* Стилизация секции Онлнай-Запись */
 
+/* Стилизация основных контактов */
 .contacts {
   background-color: var(--extra-bg-color);
+  position: relative;
 }
+
+.contacts::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  background-image: url(/images/Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.1;
+
+}
+
 .two-sections {
   display: flex;
   justify-content: center;
 }
 
-.booking-section {
+/* Стилизация секции Онлнай-Запись */
+.form-section {
   width: 50%;
+  padding-right: 25px;
 }
+
+.main-form-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.main-form-field {
+  width: 265px ;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: rgba(157, 164, 189, 0.4) 1px solid;
+  padding-bottom: 8px;
+}
+
+.main-form-comment {
+  width: 560px;
+  margin-top: 44px;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: rgba(157, 164, 189, 0.4) 1px solid;
+  padding-bottom: 8px;
+}
+
+.main-form-field::placeholder,
+.main-form-comment::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.main-form-field:hover,
+.main-form-field:focus,
+
+/* Стилизация контактов */
 
 .contact-section {
   width: 50%;
   padding-left: 100px;
 }
-
-/* Стилизация основных контактов */
 
 .address-block {
   margin-bottom: 70px;
@@ -591,18 +648,17 @@ img {
 }
 
 .address-list-link {
-  max-width: 270px;
   display: flex;
   align-items: center;
   line-height: 1.67;
   color: var(--secondary-color);
-  text-align: start;
-  vertical-align: top;
+  
 }
 
 .address-list-link.map {
-  align-items: flex-start;
+align-items: flex-start;
 }
+
 
 .address-list-link.underline {
   text-decoration-line: underline;
