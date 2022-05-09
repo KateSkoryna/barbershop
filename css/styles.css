@@ -600,6 +600,7 @@ img {
 
 .main-form-field {
   width: 265px ;
+  color: #fff;
   background-color: transparent;
   border: transparent;
   border-bottom: rgba(157, 164, 189, 0.4) 1px solid;
@@ -608,7 +609,9 @@ img {
 
 .main-form-comment {
   width: 560px;
+  resize: none;
   margin-top: 44px;
+  color: #fff;
   background-color: transparent;
   border: transparent;
   border-bottom: rgba(157, 164, 189, 0.4) 1px solid;
@@ -619,8 +622,7 @@ img {
 .main-form-field:focus,
 .main-form-comment:hover,
 .main-form-comment:focus {
-  border-bottom: #fff;
-  color: #fff;
+  border-bottom: #fff 1px solid;
 }
 
 
@@ -633,6 +635,14 @@ img {
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
 }
+
+.main-form-field:hover::placeholder,
+.main-form-field:focus::placeholder,
+.main-form-comment:hover::placeholder,
+.main-form-comment:focus::placeholder {
+  color: #fff;
+}
+
 /* Стилизация контактов */
 
 .contact-section {
