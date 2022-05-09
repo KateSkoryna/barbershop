@@ -574,7 +574,7 @@ img {
   left: 50%;
   background-image: url(/images/Bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   z-index: 1;
   opacity: 0.1;
 
@@ -588,7 +588,7 @@ img {
 /* Стилизация секции Онлнай-Запись */
 .form-section {
   width: 50%;
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 .main-form-list {
@@ -615,6 +615,15 @@ img {
   padding-bottom: 8px;
 }
 
+.main-form-field:hover,
+.main-form-field:focus,
+.main-form-comment:hover,
+.main-form-comment:focus {
+  border-bottom: #fff;
+  color: #fff;
+}
+
+
 .main-form-field::placeholder,
 .main-form-comment::placeholder {
   font-weight: 600;
@@ -624,10 +633,6 @@ img {
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
 }
-
-.main-form-field:hover,
-.main-form-field:focus,
-
 /* Стилизация контактов */
 
 .contact-section {
